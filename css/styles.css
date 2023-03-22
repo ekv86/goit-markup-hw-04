@@ -96,6 +96,18 @@ section {
     color: inherit;
 }
 
+.contact-mail,
+.contact-tel {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+}
+
 .menu-link:hover,
 .menu-link:focus, 
 .contact-mail:hover,
@@ -105,10 +117,11 @@ section {
     color: var(--accent-color);
 }
 
-.header-contact-item:hover,
-.header-contact-item:focus {
+.contact-tel:hover .header-icon,
+.contact-tel:focus .header-icon,
+.contact-mail:hover .header-icon,
+.contact-mail:focus .header-icon {
     fill: var(--accent-color);
-    cursor: pointer;
 }
 
 .header-contact {
@@ -117,19 +130,9 @@ section {
     align-items: center;
 }
 
-.contact-mail,
-.contact-tel {
+.header-contacts {
+    display: block;
     margin-left: 10px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-color);
-}
-
-.header-contact-item {
-    display: flex;
-    justify-content: center;
 }
 .header-contact-item:last-child {
     margin-left: 40px;
@@ -226,10 +229,12 @@ section {
 }
 
 .advantages-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
     background-color: #F5F4FA;
-    padding: 25px 100px;
     margin-bottom: 30px;
     
 }
@@ -333,9 +338,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 32px;
-    padding-right: 30px;
-
 }
 
 .team-icon:not(:first-child) {
@@ -375,9 +377,6 @@ section {
     justify-content: center;
 }
 
-.clients-item {
-    padding: 16px 32px;
-}
 .clients-item:not(:first-child) {
     margin-left: 30px;
 }
@@ -404,15 +403,19 @@ section {
 } 
 /* ========FOOTER======== */
 
-.footer-container-address {
-    margin-top: 60px;
-    margin-bottom: 60px;
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-logo {
     color: #FFFFFF;
 }
 
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
 address {
     margin-top: 28px;
 }
@@ -437,14 +440,11 @@ address {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-container {
-    display: flex;
-}
+
 
 .footer-join {
     margin-left: 94px;
-    margin-top: 72px;
-    margin-bottom: 99px;
+
 }
 
 .join {
@@ -459,6 +459,7 @@ address {
     display: flex;
     margin-top: 20px;
 }
+
 .footer-icon-link {
     display: flex;
     justify-content: center;
@@ -515,6 +516,7 @@ address {
 
 .filter:hover,
 .filter:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--accent-color);
     color: #FFFFFF;
 }
@@ -528,20 +530,26 @@ address {
 }
 
 .portfolio-items { 
+    max-width: 370px;
+    max-height: 404px;
+    border: 1px solid #EEEEEE;
     margin-left: 30px;
     margin-bottom: 30px;
     background: #FFFFFF;   
 }
 
-.portfolio-items:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.portfolio-item {
+    display: block;
 }
 
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
 
 .portfolio-description {
     padding: 20px 24px;
-    border: 1px solid #EEEEEE;
-    border-top: 0;
 }
 
 .portfolio-name {
